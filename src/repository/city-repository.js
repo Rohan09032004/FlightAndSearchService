@@ -3,9 +3,7 @@ const {City} = require('../models/index.js')
 class CityRepository{
     async createCity({name}){
         try{
-            const city = await City.create({
-                name
-            });
+            const city = await City.create({name});
             return city;
         }
         catch(error){
@@ -50,9 +48,9 @@ class CityRepository{
 
     }
 
-    async getCity(cityid){
+    async getCity(cityId){
         try{
-            const city = await City.findByPk(cityid);
+            const city = await City.findByPk(cityId);
             return city;
         }
         catch (error){
