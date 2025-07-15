@@ -6,7 +6,7 @@
  - `PORT = 3000`
  - Inside the `sre/config` folder create a new file `config.json` and then add the following piece of json
 
- ...
+ ```
 
  {
   "development": {
@@ -18,5 +18,9 @@
   }
 }
 
-...
+
+```
 - Once you have added the db config as listed above, go to the src folder and execute `npx sequelize db:create`
+and then migrate `npx sequelize db:migrate`
+
+```
