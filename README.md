@@ -1,10 +1,10 @@
 # Welcome to Flights Service
  ## Project Setup
- - clone the project on your local
- - execute `npm instal` on the same path as of your root directory of the downloaded project
- - create a `.env` file in the root directory and add the following environment variables
+ - clone the project on your local.
+ - execute `npm instal` on the same path as of your root directory of the downloaded project.
+ - create a `.env` file in the root directory and add the following environment variables.
  - `PORT = 3000`
- - Inside the `sre/config` folder create a new file `config.json` and then add the following piece of json
+ - Inside the `sre/config` folder create a new file `config.json` and then add the following piece of json.
 
  ```
  {
@@ -23,3 +23,13 @@ and then migrate
 ```
 npx sequelize db:migrate
 ```
+
+## DB Design
+- Airplane Table
+- Flight 
+- Airpot
+- City
+
+- A flight belongs to an airplane but one airplane can be used in multiple flights.
+- A city has many airports but one airport belongs to a city.
+- One airport can have many flights, but a flight belongs to one airport.
