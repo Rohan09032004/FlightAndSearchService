@@ -24,16 +24,16 @@ class FlightService{
         }
     }
 
-    //async getFlightData(data){
-    //     try{
-    //         const flights = await this.FlightRepository.getAllFlights(data);
-    //         return flights;
-    //     }
-    //     catch(error){
-    //         console.log("Something went wrong in the flight Service layer");
-    //         throw{error};
-    //     }
-    // }
+    async getAllFlightData(data){
+        try{
+            const flights = await this.flightrepository.getAllFlights(data);
+            return flights;
+        }
+        catch(error){
+            console.log("Something went wrong in the flight Service layer");
+            throw{error};
+        }
+    }
     // async getFlight(flightId){
     //     try {
     //         const flight = await this.FlightRepository.getFlightData(flightId);
